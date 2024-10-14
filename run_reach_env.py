@@ -1,6 +1,6 @@
 
 import argparse
-from reach_env import TestpoleEnvCfg
+from manipulation_with_Isaac.reach_env import TestpoleEnvCfg
 
 from omni.isaac.lab.app import AppLauncher
 

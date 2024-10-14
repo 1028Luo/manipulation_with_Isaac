@@ -14,14 +14,18 @@ import torch
 import omni.isaac.lab_tasks  # noqa: F401
 from omni.isaac.lab_tasks.utils import load_cfg_from_registry
 
+# import myEnv
+
+
 # creates base environment
 #################### to do ####################
 ## register another env of my own
-cfg = load_cfg_from_registry("Isaac-Reach-Franka-v0", "env_cfg_entry_point")
+cfg = load_cfg_from_registry("Isaac-Lift-Soft-Franka-v0", "env_cfg_entry_point")
+
 #################### to do ####################
 cfg.scene.num_envs = 4 # overides num of envs
 
-env = gym.make("Isaac-Reach-Franka-v0", cfg=cfg, render_mode="rgb_array")
+env = gym.make("Isaac-Lift-Soft-Franka-v0", cfg=cfg, render_mode="rgb_array")
 
 
 # wrap environment to enforce that reset is called before step
