@@ -1,5 +1,7 @@
-import time
+# For ME5418 Project submission_1
+# written by Jiexing Luo
 
+import time
 from omni.isaac.lab.app import AppLauncher
 
 # when you want no render
@@ -20,12 +22,12 @@ from omni.isaac.lab_tasks.utils import load_cfg_from_registry
 # creates base environment
 #################### to do ####################
 ## register another env of my own
-cfg = load_cfg_from_registry("Isaac-Lift-Soft-Franka-v0", "env_cfg_entry_point")
+cfg = load_cfg_from_registry("ManipulateSoftDirect", "env_cfg_entry_point")
 
 #################### to do ####################
-cfg.scene.num_envs = 4 # overides num of envs
-
-env = gym.make("Isaac-Lift-Soft-Franka-v0", cfg=cfg, render_mode="rgb_array")
+#cfg.scene.num_envs = 8 # overides num of envs
+#cfg.scene.replicate_physics = True
+env = gym.make("ManipulateSoftDirect", cfg=cfg, render_mode="rgb_array")
 
 
 # wrap environment to enforce that reset is called before step
